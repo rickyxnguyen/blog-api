@@ -7,8 +7,6 @@ on:
       - 'spring-boot-rest-api/**'
   pull_request:
     types: [opened, synchronize, reopened]
-  workflow_dispatch:
-    
 jobs:
   build:
     name: Build
@@ -39,4 +37,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           cd spring-boot-rest-api
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=brandonrng_blog-api
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=rickyxnguyen_blog-api
